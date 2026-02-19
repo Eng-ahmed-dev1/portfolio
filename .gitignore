@@ -1,0 +1,17 @@
+# Dependency directories (أهم حاجة عشان المساحة)
+node_modules/
+
+# Build output (اختياري، لكن يفضل لو السيرفر هو اللي بيعمل Build)
+# dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE settings (لو شغال بـ VS Code)
+.vscode/

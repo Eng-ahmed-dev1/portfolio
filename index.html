@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Eng Ahmed Alaa",
+  "jobTitle": "ASP.NET Core Backend Developer",
+  "sameAs": [
+    "https://github.com/Eng-ahmed-dev1",
+    "https://linkedin.com/in/ahmed-alaa-b256a2389"
+  ]
+}
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Eng Ahmed Alaa | ASP.NET Core Backend Developer">
+    <meta property="og:description"
+        content="Official personal website and portfolio of Eng Ahmed Alaa, ASP.NET Core Backend Developer.">
+    <meta property="og:type" content="website">
+    <meta name="google-site-verification" content="MzhH81JJbQaAaeCBFA713jHLoDaKMTByK06yzn8r-n0" />
+    <!-- SEO Meta Tags -->
+    <title>Eng Ahmed Alaa | ASP.NET Core Backend Developer | Portfolio</title>
+    <meta name="description"
+        content="Eng Ahmed Alaa - Professional ASP.NET Core Backend Developer specializing in Clean Architecture, RESTful APIs, and SQL Server. View my portfolio and projects.">
+    <meta name="keywords"
+        content="Eng Ahmed Alaa, Ahmed Alaa, ASP.NET Developer, Backend Developer, C# Developer, SQL Server, Clean Architecture, Egypt Developer, Software Developer, Co-Founder at Xalvionet">
+
+    <meta name="author" content="Ahmed Alaa">
+    <meta name="robots" content="index, follow">
+
+
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="./Images/Icons/logo.png">
+
+
+
+</head>
+
+<body class="antialiased relative">
+    <!-- Loading Screen -->
+    <div id="loading-screen"
+        class="fixed top-0 left-0 w-full h-full bg-[#050505] flex flex-col items-center justify-center z-[10000] overflow-hidden">
+        <!-- Animated Background Gradient -->
+        <div class="absolute inset-0 opacity-30">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500 rounded-full blur-[150px] animate-pulse">
+            </div>
+            <div class="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-purple-500 rounded-full blur-[120px] animate-pulse"
+                style="animation-delay: 0.5s;"></div>
+        </div>
+
+        <div class="loader-content relative z-10">
+            <!-- Spinning Circle with Code Icon -->
+            <div class="loader-spinner-container mb-8">
+                <div class="loader-spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring" style="animation-delay: 0.15s;"></div>
+                    <div class="spinner-ring" style="animation-delay: 0.3s;"></div>
+                    <i data-lucide="terminal" class="spinner-icon"></i>
+                </div>
+            </div>
+
+            <!-- Animated Logo -->
+            <div class="loader-logo-wrapper">
+                <h1 class="loader-logo-new">
+                    <span class="letter" style="animation-delay: 0.1s;">E</span>
+                    <span class="letter" style="animation-delay: 0.2s;">n</span>
+                    <span class="letter" style="animation-delay: 0.3s;">g</span>
+                    <span class="letter space" style="animation-delay: 0.4s;"> </span>
+                    <span class="letter accent" style="animation-delay: 0.5s;">A</span>
+                    <span class="letter accent" style="animation-delay: 0.6s;">h</span>
+                    <span class="letter accent" style="animation-delay: 0.7s;">m</span>
+                    <span class="letter accent" style="animation-delay: 0.8s;">e</span>
+                    <span class="letter accent" style="animation-delay: 0.9s;">d</span>
+                </h1>
+            </div>
+
+            <!-- Typing Text Effect -->
+            <div class="loader-text-new">
+                <span id="loading-text">Initializing</span>
+                <span class="loading-dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </span>
+            </div>
+
+            <!-- Modern Progress Bar -->
+            <div class="loader-bar-new">
+                <div class="loader-progress-new"></div>
+                <div class="loader-glow"></div>
+            </div>
+
+            <!-- Percentage Counter -->
+            <div class="loader-percentage">
+                <span id="loading-percentage">0</span>%
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Markup -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower">
+        <span>View</span>
+    </div>
+
+    <!-- Neural Network Background -->
+    <canvas id="neural-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-300" id="navbar">
+        <div
+            class="max-w-7xl mx-auto flex justify-between items-center backdrop-blur-md bg-black/30 rounded-full px-6 py-3 border border-white/10">
+            <a href="#home"
+                class="text-xl font-bold tracking-tighter hover:text-blue-500 transition-colors cursor-active">
+                Eng <span class="text-blue-500"> Ahmed</span>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-2">
+                <a href="#home"
+                    class="magnetic-btn px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors relative group cursor-active">
+                    Home
+                    <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-1/2 group-hover:-translate-x-1/2"></span>
+                </a>
+                <a href="#about"
+                    class="magnetic-btn px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors relative group cursor-active">
+                    About
+                    <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-1/2 group-hover:-translate-x-1/2"></span>
+                </a>
+                <a href="#projects"
+                    class="magnetic-btn px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors relative group cursor-active">
+                    Projects
+                    <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-1/2 group-hover:-translate-x-1/2"></span>
+                </a>
+                <a href="#skills"
+                    class="magnetic-btn px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors relative group cursor-active">
+                    Skills
+                    <span
+                        class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-1/2 group-hover:-translate-x-1/2"></span>
+                </a>
+                <a href="./files/Resume.pdf" download
+                    class="magnetic-btn px-5 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-colors cursor-active flex items-center gap-2">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    My Resume
+                </a>
+                <a href="#contact"
+                    class="magnetic-btn px-5 py-2 text-sm bg-white text-black font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-colors cursor-active">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white cursor-active"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-4 right-4 bg-black/90 border border-white/10 rounded-2xl p-4 flex flex-col space-y-4 md:hidden backdrop-blur-xl">
+            <a href="#home" class="text-center py-2 text-gray-300 hover:text-white cursor-active">Home</a>
+            <a href="#about" class="text-center py-2 text-gray-300 hover:text-white cursor-active">About</a>
+            <a href="#projects" class="text-center py-2 text-gray-300 hover:text-white cursor-active">Projects</a>
+            <a href="#skills" class="text-center py-2 text-gray-300 hover:text-white cursor-active">Skills</a>
+            <a href="#contact"
+                class="text-center py-2 bg-blue-600 rounded-lg text-white font-semibold cursor-active">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- Left Column -->
+            <div class="text-center lg:text-left order-2 lg:order-1">
+                <div
+                    class="inline-block mb-4 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-wider uppercase animate-float">
+                    Available for Freelance & Hire
+                </div>
+
+                <!-- Typing Effect Header -->
+                <h1
+                    class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight min-h-[160px] md:min-h-[auto]">
+                    I'm <br class="md:hidden">
+                    <span id="typewriter"
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"></span>
+                    <span class="typing-cursor">|</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Hi, I'm <span class="text-white font-semibold">Ahmed Alaa</span>. An ASP.NET Core Backend Developer
+                    specializing in Clean Architecture, RESTful APIs, and high-performance SQL Server solutions.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                    <a href="#projects"
+                        class="magnetic-btn group px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all flex items-center gap-2 cursor-active">
+                        View My Work
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact"
+                        class="magnetic-btn px-8 py-4 border border-white/20 rounded-full hover:bg-white/10 transition-all font-medium flex items-center gap-2 cursor-active">
+                        Contact Me
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-12 flex justify-center lg:justify-start gap-6">
+                    <a href="https://github.com/Eng-ahmed-dev1" target="_blank"
+                        class="magnetic-btn p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/20 hover:scale-110 transition-all cursor-active">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/ahmed-alaa-b256a2389" target="_blank"
+                        class="magnetic-btn p-3 rounded-full bg-white/5 border border-white/10 hover:bg-blue-600 hover:border-blue-600 hover:scale-110 transition-all cursor-active">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="mailto:ahmed.devmail1@gmail.com"
+                        class="magnetic-btn p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/20 hover:scale-110 transition-all cursor-active">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Photo Space -->
+            <div class="flex justify-center lg:justify-start order-1 lg:order-1">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 group">
+                    <div
+                        class="absolute inset-0 bg-blue-500 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden shadow-2xl animate-float cursor-active">
+                        <img src="./Images/me.jpeg" alt="Eng Ahmed Alaa - ASP.NET Core Backend Developer"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div
+                        class="absolute -inset-4 border border-blue-500/20 rounded-full w-[115%] h-[115%] -left-[7.5%] -top-[7.5%] animate-spin [animation-duration:10s] pointer-events-none">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50 pointer-events-none">
+                <i data-lucide="chevron-down" class="w-6 h-6"></i>
+            </div>
+    </header>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal-section">About Me</h2>
+
+            <div class="reveal-section grid lg:grid-cols-2 gap-12 items-start mb-16">
+                <!-- Left: Technical Image Placeholder -->
+                <div class="relative group cursor-active order-2 lg:order-1">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000">
+                    </div>
+                    <div class="relative bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden">
+                        <!-- Technical Image Placeholder -->
+                        <div class="aspect-video w-full flex items-center justify-center overflow-hidden rounded-2xl">
+                            <img src="./Images/setup.jpg" alt="Ahmed Alaa" class="w-full h-full object-cover">
+                        </div>
+
+
+                        <!-- Tech Stack Icons Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                            <div class="flex gap-4 justify-center">
+                                <div
+                                    class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                    <i data-lucide="code" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div
+                                    class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                    <i data-lucide="database" class="w-5 h-5 text-green-400"></i>
+                                </div>
+                                <div
+                                    class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                    <i data-lucide="server" class="w-5 h-5 text-purple-400"></i>
+                                </div>
+                                <div
+                                    class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                    <i data-lucide="git-branch" class="w-5 h-5 text-orange-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: About Content -->
+                <div class="space-y-6 order-1 lg:order-2">
+                    <div
+                        class="inline-block px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold">
+                        Backend Developer
+                    </div>
+
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I'm a software developer focused on <span class="text-blue-400 font-semibold">C#</span>,
+                        <span class="text-blue-400 font-semibold">ASP.NET</span>, and
+                        <span class="text-blue-400 font-semibold">SQL Server</span>. I enjoy building clean and
+                        reliable web applications, organizing databases, and creating solutions that genuinely help
+                        users.
+                    </p>
+
+                    <p class="text-gray-400 leading-relaxed">
+                        I always aim to write simple, efficient code and keep learning to improve my work. Whether it's
+                        implementing complex business logic, optimizing database queries, or architecting scalable
+                        systems,
+                        I approach every challenge with a focus on quality and maintainability.
+                    </p>
+
+                    <p class="text-gray-400 leading-relaxed">
+                        I'm also open to <span class="text-white">collaborating with teams</span> and contributing to
+                        new
+                        projects that push boundaries and solve real-world problems 🤝
+                    </p>
+
+                    <!-- Key Highlights -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6">
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-blue-500/10 rounded-lg">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Clean Architecture</h4>
+                                <p class="text-sm text-gray-400">SOLID principles & design patterns</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-purple-500/10 rounded-lg">
+                                <i data-lucide="database" class="w-5 h-5 text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Database Design</h4>
+                                <p class="text-sm text-gray-400">Optimized SQL & Entity Framework</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-green-500/10 rounded-lg">
+                                <i data-lucide="code-2" class="w-5 h-5 text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">RESTful APIs</h4>
+                                <p class="text-sm text-gray-400">Scalable backend services</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-orange-500/10 rounded-lg">
+                                <i data-lucide="users" class="w-5 h-5 text-orange-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Team Player</h4>
+                                <p class="text-sm text-gray-400">Collaborative & communicative</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="reveal-section grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div
+                    class="p-6 bg-white/5 rounded-xl border border-white/10 text-center hover:bg-white/10 hover:border-blue-500/30 transition-all cursor-active">
+                    <div class="text-4xl font-bold text-blue-500 mb-2">3</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wide">Years Experience</div>
+                </div>
+                <div
+                    class="p-6 bg-white/5 rounded-xl border border-white/10 text-center hover:bg-white/10 hover:border-purple-500/30 transition-all cursor-active">
+                    <div class="text-4xl font-bold text-purple-500 mb-2">5+</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wide">Projects Completed</div>
+                </div>
+                <div
+                    class="p-6 bg-white/5 rounded-xl border border-white/10 text-center hover:bg-white/10 hover:border-green-500/30 transition-all cursor-active">
+                    <div class="text-4xl font-bold text-green-500 mb-2">5+</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wide">Technologies</div>
+                </div>
+                <div
+                    class="p-6 bg-white/5 rounded-xl border border-white/10 text-center hover:bg-white/10 hover:border-orange-500/30 transition-all cursor-active">
+                    <div class="text-4xl font-bold text-orange-500 mb-2">100%</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wide">Commitment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section - Improved Version with Filtering -->
+    <section id="projects" class="py-24 relative z-10 bg-black/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Header -->
+            <div class="text-center mb-16 reveal-section">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Focusing on performance and architecture.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="reveal-section mb-12 flex flex-wrap justify-center gap-4">
+                <button data-filter="all"
+                    class="filter-btn active px-6 py-3 rounded-full font-semibold transition-all cursor-active">
+                    <i data-lucide="grid-3x3" class="w-4 h-4 inline-block mr-2"></i>
+                    All Projects
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">7</span>
+                </button>
+                <button data-filter="wpf"
+                    class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active">
+                    <i data-lucide="monitor" class="w-4 h-4 inline-block mr-2"></i>
+                    WPF Desktop
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">5</span>
+                </button>
+                <button data-filter="mvc"
+                    class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active">
+                    <i data-lucide="globe" class="w-4 h-4 inline-block mr-2"></i>
+                    ASP.NET MVC
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">2</span>
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                <!-- StockMaster Project Card -->
+                <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
+                    data-category="mvc">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="h-full bg-[#0a0a0a] rounded-xl overflow-hidden relative z-20 flex flex-col">
+                        <!-- Project Image -->
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-blue-900/20 to-purple-900/20">
+                            <img src="./Images/Projects_Images/StockMaster/Images/Dark-ModeTransactionDashBoard.png"
+                                alt="StockMaster Project"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+
+                            <!-- Category Badge -->
+                            <div class="absolute top-3 right-3">
+                                <span
+                                    class="px-2 py-1 bg-blue-500/90 backdrop-blur-sm text-white rounded-full text-xs font-bold">MVC</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 bg-blue-500/10 rounded-lg text-blue-500">
+                                    <i data-lucide="database" class="w-6 h-6"></i>
+                                </div>
+                                <a href="https://github.com/Eng-ahmed-dev1/StockMaster" target="_blank">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-gray-500 group-hover:text-blue-500 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">StockMaster
+                            </h3>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-1">
+                                Inventory management with Repository Pattern and Unit of Work.
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs">ASP.NET
+                                    Core</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-xs">SQL
+                                    Server</span>
+                                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs">EF
+                                    Core</span>
+                            </div>
+
+                            <!-- View More Button -->
+                            <a href="project-details.html?project=stockmaster"
+                                class="magnetic-btn w-full px-6 py-3 bg-blue-600/10 border border-blue-500/30 text-blue-400 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center gap-2 cursor-active">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                View More Photos
+                            </a>
+                        </div>
+                        <div class="card-reflection"></div>
+                    </div>
+                </div>
+
+                <!-- Management System Project Card -->
+                <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
+                    data-category="mvc">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="h-full bg-[#0a0a0a] rounded-xl overflow-hidden relative z-20 flex flex-col">
+                        <!-- Project Image -->
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-blue-900/20 to-purple-900/20">
+                            <img src="./Images/Projects_Images/Managment_System/Images/All Projects.png"
+                                alt="Management System Project"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+
+                            <!-- Category Badge -->
+                            <div class="absolute top-3 right-3">
+                                <span
+                                    class="px-2 py-1 bg-blue-500/90 backdrop-blur-sm text-white rounded-full text-xs font-bold">MVC</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 bg-blue-500/10 rounded-lg text-blue-500">
+                                    <i data-lucide="clipboard-list" class="w-6 h-6"></i>
+                                </div>
+                                <a href="https://github.com/Eng-ahmed-dev1/Project_and_Task_Managment_SYS"
+                                    target="_blank">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-gray-500 group-hover:text-blue-500 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">Management
+                                System</h3>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-1">
+                                Simple to-do list for project and task management with team member assignments.
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs">ASP.NET
+                                    Core</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-xs">SQL
+                                    Server</span>
+                                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs">EF
+                                    Core</span>
+                            </div>
+
+                            <!-- View More Button -->
+                            <a href="project-details.html?project=management-system"
+                                class="magnetic-btn w-full px-6 py-3 bg-blue-600/10 border border-blue-500/30 text-blue-400 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center gap-2 cursor-active">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                View More Photos
+                            </a>
+                        </div>
+                        <div class="card-reflection"></div>
+                    </div>
+                </div>
+
+                <!-- Appointment Management System Project Card -->
+                <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
+                    data-category="wpf">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="h-full bg-[#0a0a0a] rounded-xl overflow-hidden relative z-20 flex flex-col">
+                        <!-- Project Image -->
+                        <div
+                            class="relative h-48 overflow-hidden bg-gradient-to-br from-orange-900/20 to-yellow-900/20">
+                            <img src="./Images/Projects_Images/Appoiment_Managment_System/Images/Dashboard.png"
+                                alt="Appointment Management System"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+
+                            <!-- Category Badge -->
+                            <div class="absolute top-3 right-3">
+                                <span
+                                    class="px-2 py-1 bg-red-500/90 backdrop-blur-sm text-white rounded-full text-xs font-bold">WPF</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 bg-orange-500/10 rounded-lg text-orange-500">
+                                    <i data-lucide="calendar-check" class="w-6 h-6"></i>
+                                </div>
+                                <a href="https://github.com/Eng-ahmed-dev1/Appoiment-Project-WPF" target="_blank">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-gray-500 group-hover:text-orange-500 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-orange-400 transition-colors">
+                                Appointment System</h3>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-1">
+                                Professional appointment scheduling with web and desktop interfaces.
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 rounded-full text-xs">ASP.NET
+                                    Core</span>
+                                <span class="px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-xs">WPF</span>
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs">XAML</span>
+                            </div>
+
+                            <!-- View More Button -->
+                            <a href="project-details.html?project=appointment-system"
+                                class="magnetic-btn w-full px-6 py-3 bg-orange-600/10 border border-orange-500/30 text-orange-400 rounded-full font-semibold hover:bg-orange-600 hover:text-white transition-all flex items-center justify-center gap-2 cursor-active">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                View More Photos
+                            </a>
+                        </div>
+                        <div class="card-reflection"></div>
+                    </div>
+                </div>
+
+                <!-- Grades Management System Project Card -->
+                <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
+                    data-category="wpf">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="h-full bg-[#0a0a0a] rounded-xl overflow-hidden relative z-20 flex flex-col">
+                        <!-- Project Image -->
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-green-900/20 to-teal-900/20">
+                            <img src="./Images/Projects_Images/Assigment_Initilization/Images/Teacher Dashboard.png"
+                                alt="Grades Management System"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+
+                            <!-- Category Badge -->
+                            <div class="absolute top-3 right-3">
+                                <span
+                                    class="px-2 py-1 bg-red-500/90 backdrop-blur-sm text-white rounded-full text-xs font-bold">WPF</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 bg-green-500/10 rounded-lg text-green-500">
+                                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                                </div>
+                                <a href="https://github.com/Eng-ahmed-dev1/Grades-Management-System" target="_blank">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-gray-500 group-hover:text-green-500 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-green-400 transition-colors">Grades
+                                Management</h3>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-1">
+                                Grade initialization system with average calculation to monitor performance.
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-xs">WPF</span>
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs">XAML</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-xs">SQL
+                                    Server</span>
+                            </div>
+
+                            <!-- View More Button -->
+                            <a href="project-details.html?project=grade-system"
+                                class="magnetic-btn w-full px-6 py-3 bg-green-600/10 border border-green-500/30 text-green-400 rounded-full font-semibold hover:bg-green-600 hover:text-white transition-all flex items-center justify-center gap-2 cursor-active">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                View More Photos
+                            </a>
+                        </div>
+                        <div class="card-reflection"></div>
+                    </div>
+                </div>
+
+                <!-- Course Management System Project Card -->
+                <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
+                    data-category="wpf">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="h-full bg-[#0a0a0a] rounded-xl overflow-hidden relative z-20 flex flex-col">
+                        <!-- Project Image -->
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20">
+                            <img src="./Images/Projects_Images/Course_Managment/Images/Teacher Dashboard.png"
+                                alt="Course Management System"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+
+                            <!-- Category Badge -->
+                            <div class="absolute top-3 right-3">
+                                <span
+                                    class="px-2 py-1 bg-red-500/90 backdrop-blur-sm text-white rounded-full text-xs font-bold">WPF</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 bg-purple-500/10 rounded-lg text-purple-500">
+                                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                                </div>
+                                <a href="https://github.com/Eng-ahmed-dev1/Course-Management-System" target="_blank">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-gray-500 group-hover:text-purple-500 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-400 transition-colors">Course
+                                Management</h3>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-1">
+                                Professional course management system for organizing courses and students.
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-xs">WPF</span>
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs">XAML</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-xs">SQL
+                                    Server</span>
+                            </div>
+
+                            <!-- View More Button -->
+                            <a href="project-details.html?project=course-system"
+                                class="magnetic-btn w-full px-6 py-3 bg-purple-600/10 border border-purple-500/30 text-purple-400 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition-all flex items-center justify-center gap-2 cursor-active">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                View More Photos
+                            </a>
+                        </div>
+                        <div class="card-reflection"></div>
+                    </div>
+                </div>
+
+                <!-- E-Commerce WPF Project Card -->
+                <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
+                    data-category="wpf">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="h-full bg-[#0a0a0a] rounded-xl overflow-hidden relative z-20 flex flex-col">
+                        <!-- Project Image -->
+                        <div
+                            class="relative h-48 overflow-hidden bg-gradient-to-br from-yellow-900/20 to-orange-900/20">
+                            <img src="./Images/Projects_Images/E_commerce_WPF/Images/Product Managment Dashboard.png"
+                                alt="E-Commerce WPF System"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+
+                            <!-- Category Badge -->
+                            <div class="absolute top-3 right-3">
+                                <span
+                                    class="px-2 py-1 bg-red-500/90 backdrop-blur-sm text-white rounded-full text-xs font-bold">WPF</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 bg-yellow-500/10 rounded-lg text-yellow-500">
+                                    <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                                </div>
+                                <a href="https://github.com/Eng-ahmed-dev1/E-Commerce-Management-System"
+                                    target="_blank">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-gray-500 group-hover:text-yellow-500 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">E-Commerce
+                                WPF</h3>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-1">
+                                E-commerce management with product catalog, orders, and customer management.
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-xs">WPF</span>
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs">XAML</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-xs">SQL
+                                    Server</span>
+                            </div>
+
+                            <!-- View More Button -->
+                            <a href="project-details.html?project=E-Commerce-system"
+                                class="magnetic-btn w-full px-6 py-3 bg-yellow-600/10 border border-yellow-500/30 text-yellow-400 rounded-full font-semibold hover:bg-yellow-600 hover:text-white transition-all flex items-center justify-center gap-2 cursor-active">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                View More Photos
+                            </a>
+                        </div>
+                        <div class="card-reflection"></div>
+                    </div>
+                </div>
+
+                <!-- Inventory Management System Project Card -->
+                <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
+                    data-category="wpf">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-teal-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="h-full bg-[#0a0a0a] rounded-xl overflow-hidden relative z-20 flex flex-col">
+                        <!-- Project Image -->
+                        <div class="relative h-48 overflow-hidden bg-gradient-to-br from-teal-900/20 to-cyan-900/20">
+                            <img src="./Images/Projects_Images/Inventory_Managment_System/Images/Admin Dashboard.png"
+                                alt="Inventory Management System"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+
+                            <!-- Category Badge -->
+                            <div class="absolute top-3 right-3">
+                                <span
+                                    class="px-2 py-1 bg-red-500/90 backdrop-blur-sm text-white rounded-full text-xs font-bold">WPF</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 bg-teal-500/10 rounded-lg text-teal-500">
+                                    <i data-lucide="package" class="w-6 h-6"></i>
+                                </div>
+                                <a href="https://github.com/Eng-ahmed-dev1/Inventory-Management-System" target="_blank">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-gray-500 group-hover:text-teal-500 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-teal-400 transition-colors">Inventory
+                                System</h3>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-1">
+                                Inventory management and stock clerk operations system.
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-xs">WPF</span>
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs">XAML</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-xs">SQL
+                                    Server</span>
+                            </div>
+
+                            <!-- View More Button -->
+                            <a href="project-details.html?project=Inventory-system"
+                                class="magnetic-btn w-full px-6 py-3 bg-teal-600/10 border border-teal-500/30 text-teal-400 rounded-full font-semibold hover:bg-teal-600 hover:text-white transition-all flex items-center justify-center gap-2 cursor-active">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                View More Photos
+                            </a>
+                        </div>
+                        <div class="card-reflection"></div>
+                    </div>
+                </div>
+                <!-- No Results Message -->
+                <div id="no-results" class="hidden text-center py-16">
+                    <div class="inline-block p-6 bg-white/5 rounded-full mb-6">
+                        <i data-lucide="search-x" class="w-16 h-16 text-gray-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">No Projects Found</h3>
+                    <p class="text-gray-400">Try selecting a different filter to view more projects.</p>
+                </div>
+
+            </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-section">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Technical Arsenal</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Categorized overview of my technical proficiency</p>
+            </div>
+
+            <div class="skills-categories-container reveal-section">
+
+                <div class="category-card group cursor-active">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <h3 class="category-title">
+                        <div class="p-2 bg-blue-500/10 rounded-lg text-blue-400">
+                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                        </div>
+                        Languages
+                    </h3>
+
+                    <div class="skills-list relative z-10">
+                        <div class="skill-item group/item">
+                            <i data-lucide="hash" class="w-5 h-5 text-blue-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">C#</h4>
+                                <p class="text-xs text-gray-500">Modern .NET Syntax</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="database" class="w-5 h-5 text-blue-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">SQL (T-SQL)</h4>
+                                <p class="text-xs text-gray-500">Queries & Stored Procedures</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="layout" class="w-5 h-5 text-blue-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">HTML5 & CSS3</h4>
+                                <p class="text-xs text-gray-500">Markup & Styling</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="monitor" class="w-5 h-5 text-blue-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">XAML</h4>
+                                <p class="text-xs text-gray-500">Desktop UI Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card group cursor-active">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <h3 class="category-title">
+                        <div class="p-2 bg-purple-500/10 rounded-lg text-purple-400">
+                            <i data-lucide="blocks" class="w-6 h-6"></i>
+                        </div>
+                        Frameworks
+                    </h3>
+
+                    <div class="skills-list relative z-10">
+                        <div class="skill-item group/item">
+                            <i data-lucide="globe" class="w-5 h-5 text-purple-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">ASP.NET Core</h4>
+                                <p class="text-xs text-gray-500">Web API & MVC</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="layers" class="w-5 h-5 text-purple-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">Entity Framework</h4>
+                                <p class="text-xs text-gray-500">ORM & Code First</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="server" class="w-5 h-5 text-purple-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">SQL Server</h4>
+                                <p class="text-xs text-gray-500">RDBMS Management</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="git-branch" class="w-5 h-5 text-purple-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">Git & GitHub</h4>
+                                <p class="text-xs text-gray-500">Version Control</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card group cursor-active">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-green-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <h3 class="category-title">
+                        <div class="p-2 bg-green-500/10 rounded-lg text-green-400">
+                            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                        </div>
+                        Soft Skills
+                    </h3>
+
+                    <div class="skills-list relative z-10">
+                        <div class="skill-item group/item">
+                            <i data-lucide="lightbulb" class="w-5 h-5 text-green-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">Problem Solving</h4>
+                                <p class="text-xs text-gray-500">Analytical Thinking</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="box-select" class="w-5 h-5 text-green-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">Clean Architecture</h4>
+                                <p class="text-xs text-gray-500">Design Principles</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="component" class="w-5 h-5 text-green-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">OOP & SOLID</h4>
+                                <p class="text-xs text-gray-500">Best Practices</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-item group/item">
+                            <i data-lucide="users" class="w-5 h-5 text-green-500"></i>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-200">Collaboration</h4>
+                                <p class="text-xs text-gray-500">Team Player</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative z-10 bg-gradient-to-t from-blue-900/10 to-transparent">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-section">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Let's Work Together</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Have a project in mind or want to collaborate? I'm always open to discussing new opportunities
+                    and innovative ideas. Let's connect!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-16 reveal-section">
+                <!-- Email Card -->
+                <a href="mailto:ahmed.devmail1@gmail.com"
+                    class="group p-8 bg-[#0a0a0a] border border-white/10 rounded-2xl hover:border-blue-500/50 hover:bg-blue-500/5 transition-all cursor-active">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
+                            <i data-lucide="mail" class="w-6 h-6 text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors">Email Me
+                            </h3>
+                            <p class="text-gray-400 text-sm mb-2">ahmed.devmail1@gmail.com</p>
+                            <p class="text-gray-500 text-xs">I'll respond within 24 hours</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Phone Card -->
+                <a href="tel:+201030939232"
+                    class="group p-8 bg-[#0a0a0a] border border-white/10 rounded-2xl hover:border-green-500/50 hover:bg-green-500/5 transition-all cursor-active">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
+                            <i data-lucide="phone" class="w-6 h-6 text-green-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2 group-hover:text-green-400 transition-colors">Call Me
+                            </h3>
+                            <p class="text-gray-400 text-sm mb-2">+20 103 093 9232</p>
+                            <p class="text-gray-500 text-xs">Mon-Fri from 9am to 6pm</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Social Links Grid -->
+            <div class="reveal-section">
+                <h3 class="text-xl font-semibold text-center mb-8">Connect With Me</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <!-- GitHub -->
+                    <a href="https://github.com/Eng-ahmed-dev1" target="_blank" rel="noopener noreferrer"
+                        class="group p-6 bg-[#0a0a0a] border border-white/10 rounded-xl hover:border-gray-400 hover:bg-gray-900/20 transition-all cursor-active">
+                        <div class="flex flex-col items-center gap-3">
+                            <div class="p-3 bg-white/5 rounded-lg group-hover:bg-white/10 transition-colors">
+                                <i data-lucide="github" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-sm font-medium group-hover:text-white transition-colors">GitHub</span>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/ahmed-alaa-b256a2389" target="_blank" rel="noopener noreferrer"
+                        class="group p-6 bg-[#0a0a0a] border border-white/10 rounded-xl hover:border-blue-500 hover:bg-blue-900/20 transition-all cursor-active">
+                        <div class="flex flex-col items-center gap-3">
+                            <div class="p-3 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
+                                <i data-lucide="linkedin" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <span
+                                class="text-sm font-medium group-hover:text-blue-400 transition-colors">LinkedIn</span>
+                        </div>
+                    </a>
+
+                    <!-- Gmail -->
+                    <a href="mailto:ahmed.devmail1@gmail.com"
+                        class="group p-6 bg-[#0a0a0a] border border-white/10 rounded-xl hover:border-red-500 hover:bg-red-900/20 transition-all cursor-active">
+                        <div class="flex flex-col items-center gap-3">
+                            <div class="p-3 bg-red-500/10 rounded-lg group-hover:bg-red-500/20 transition-colors">
+                                <i data-lucide="mail" class="w-6 h-6 text-red-400"></i>
+                            </div>
+                            <span class="text-sm font-medium group-hover:text-red-400 transition-colors">Gmail</span>
+                        </div>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/201030939232" target="_blank" rel="noopener noreferrer"
+                        class="group p-6 bg-[#0a0a0a] border border-white/10 rounded-xl hover:border-green-500 hover:bg-green-900/20 transition-all cursor-active">
+                        <div class="flex flex-col items-center gap-3">
+                            <div class="p-3 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
+                                <i data-lucide="message-circle" class="w-6 h-6 text-green-400"></i>
+                            </div>
+                            <span
+                                class="text-sm font-medium group-hover:text-green-400 transition-colors">WhatsApp</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div
+                class="reveal-section text-center mt-16 p-12 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-2xl border border-white/10">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Ready to Start a Project?</h3>
+                <p class="text-gray-400 mb-8 max-w-xl mx-auto">
+                    Whether you need a complete backend solution or want to improve your existing system,
+                    I'm here to help bring your ideas to life.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:ahmed.devmail1@gmail.com"
+                        class="magnetic-btn px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-all flex items-center gap-2 justify-center cursor-active">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        Send Message
+                    </a>
+                    <a href="https://github.com/Eng-ahmed-dev1" target="_blank"
+                        class="magnetic-btn px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-bold hover:bg-white/10 transition-all flex items-center gap-2 justify-center cursor-active">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                        View GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="mt-16 pt-8 border-t border-white/10 text-center">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-500 text-sm">
+                        &copy; 2026 Eng Ahmed Alaa | Official Personal Website & Portfolio.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#home"
+                            class="text-gray-500 hover:text-white transition-colors text-sm cursor-active">Home</a>
+                        <a href="#about"
+                            class="text-gray-500 hover:text-white transition-colors text-sm cursor-active">About</a>
+                        <a href="#projects"
+                            class="text-gray-500 hover:text-white transition-colors text-sm cursor-active">Projects</a>
+                        <a href="#skills"
+                            class="text-gray-500 hover:text-white transition-colors text-sm cursor-active">Skills</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
