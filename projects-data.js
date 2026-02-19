@@ -97,20 +97,20 @@ const projectsData = {
             { name: 'Entity Framework Core', color: 'green' },
             { name: 'LINQ', color: 'red' }
         ],
-        mainImage: './Images/Projects_Images/Managment_System/Images/All Projects.png',
+        mainImage: './Images/Projects_Images/Managment_System/Images/All-Projects.png',
         gallery: [
             {
-                image: './Images/Projects_Images/Managment_System/Images/All Projects.png',
+                image: './Images/Projects_Images/Managment_System/Images/All-Projects.png',
                 title: 'Projects Dashboard',
                 description: 'Overview of all projects with status tracking and quick access'
             },
             {
-                image: './Images/Projects_Images/Managment_System/Images/All Tasks.png',
+                image: './Images/Projects_Images/Managment_System/Images/All-Tasks.png',
                 title: 'Task Assignment',
                 description: 'Easy task creation and assignment to team members'
             },
             {
-                image: './Images/Projects_Images/Managment_System/Images/All TeamMembers.png',
+                image: './Images/Projects_Images/Managment_System/Images/All-TeamMembers.png',
                 title: 'Team Collaboration',
                 description: 'Real-time collaboration features for better team productivity'
             }
@@ -253,15 +253,15 @@ const projectsData = {
             { name: 'Entity Framework Core', color: 'green' },
             { name: 'C#', color: 'orange' }
         ],
-        mainImage: './Images/Projects_Images/Assigment_Initilization/Images/Teacher Dashboard.png',
+        mainImage: './Images/Projects_Images/Assigment_Initilization/Images/Teacher-Dashboard.png',
         gallery: [
             {
-                image: './Images/Projects_Images/Assigment_Initilization/Images/Teacher Dashboard.png',
+                image: './Images/Projects_Images/Assigment_Initilization/Images/Teacher-Dashboard.png',
                 title: 'Teacher Dashboard',
                 description: 'Comprehensive dashboard showing all students and students in specific courses with grade management'
             },
             {
-                image: './Images/Projects_Images/Assigment_Initilization/Images/Student Dashboard.png',
+                image: './Images/Projects_Images/Assigment_Initilization/Images/Student-Dashboard.png',
                 title: 'Student Dashboard',
                 description: 'Student dashboard displaying all enrolled courses with current grades and performance'
             },
@@ -328,10 +328,10 @@ const projectsData = {
             { name: 'Entity Framework Core', color: 'green' },
             { name: 'C#', color: 'orange' }
         ],
-        mainImage: './Images/Projects_Images/Course_Managment/Images/Teacher Dashboard.png',
+        mainImage: './Images/Projects_Images/Course_Managment/Images/Teacher-Dashboard.png',
         gallery: [
             {
-                image: './Images/Projects_Images/Course_Managment/Images/Teacher Dashboard.png',
+                image: './Images/Projects_Images/Course_Managment/Images/Teacher-Dashboard.png',
                 title: 'Course Dashboard',
                 description: 'Main dashboard for course management and student enrollment tracking'
             },
@@ -341,7 +341,7 @@ const projectsData = {
                 description: 'Secure login system for course administrators and instructors'
             },
             {
-                image: './Images/Projects_Images/Course_Managment/Images/Student Dashboard.png',
+                image: './Images/Projects_Images/Course_Managment/Images/Student-Dashboard.png',
                 title: 'Student View',
                 description: 'Student interface showing enrolled courses and academic information'
             }
@@ -403,20 +403,20 @@ const projectsData = {
             { name: 'Entity Framework Core', color: 'green' },
             { name: 'C#', color: 'orange' }
         ],
-        mainImage: './Images/Projects_Images/E_commerce_WPF/Images/Product Managment Dashboard.png',
+        mainImage: './Images/Projects_Images/E_commerce_WPF/Images/Product-Managment-Dashboard.png',
         gallery: [
             {
-                image: './Images/Projects_Images/E_commerce_WPF/Images/Product Managment Dashboard.png',
+                image: './Images/Projects_Images/E_commerce_WPF/Images/Product-Managment-Dashboard.png',
                 title: 'Product Management',
                 description: 'Comprehensive product management dashboard with inventory control'
             },
             {
-                image: './Images/Projects_Images/E_commerce_WPF/Images/Product Catalog Dashboard.png',
+                image: './Images/Projects_Images/E_commerce_WPF/Images/Product-Catalog-Dashboard.png',
                 title: 'Product Catalog',
                 description: 'Browse and manage product catalog with categories and pricing'
             },
             {
-                image: './Images/Projects_Images/E_commerce_WPF/Images/Cart Dashboard.png',
+                image: './Images/Projects_Images/E_commerce_WPF/Images/Cart-Dashboard.png',
                 title: 'Shopping Cart',
                 description: 'User-friendly shopping cart interface for order management'
             },
@@ -483,15 +483,15 @@ const projectsData = {
             { name: 'Entity Framework Core', color: 'green' },
             { name: 'C#', color: 'orange' }
         ],
-        mainImage: './Images/Projects_Images/Inventory_Managment_System/Images/Admin Dashboard.png',
+        mainImage: './Images/Projects_Images/Inventory_Managment_System/Images/Admin-Dashboard.png',
         gallery: [
             {
-                image: './Images/Projects_Images/Inventory_Managment_System/Images/Admin Dashboard.png',
+                image: './Images/Projects_Images/Inventory_Managment_System/Images/Admin-Dashboard.png',
                 title: 'Admin Dashboard',
                 description: 'Comprehensive admin panel for complete inventory oversight and management'
             },
             {
-                image: './Images/Projects_Images/Inventory_Managment_System/Images/Stock Clerk Dashboard.png',
+                image: './Images/Projects_Images/Inventory_Managment_System/Images/Stock-Clerk-Dashboard.png',
                 title: 'Stock Clerk Dashboard',
                 description: 'Specialized dashboard for stock clerks to manage daily operations and shipping'
             },
@@ -735,4 +735,3 @@ function initImageZoom() {
         lucide.createIcons();
     }
 }
-
