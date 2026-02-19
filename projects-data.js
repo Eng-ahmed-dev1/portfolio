@@ -648,7 +648,7 @@ function displayProjectDetails() {
 }
 
 // تحميل البيانات عند تحميل الصفحة
-if (window.location.pathname.includes('project-details.html')) {
+if (window.location.pathname.includes('project-details')) {
     document.addEventListener('DOMContentLoaded', displayProjectDetails);
 }
 
