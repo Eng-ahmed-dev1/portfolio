@@ -20,7 +20,8 @@
     <meta property="og:description"
         content="Official personal website and portfolio of Eng Ahmed Alaa, ASP.NET Core Backend Developer.">
     <meta property="og:type" content="website">
-    <meta name="google-site-verification" content="52aZ1BnXciPM13YPPQYvvjqerziQrKWPBqGWGHlBVHU" />    <!-- SEO Meta Tags -->
+    <meta name="google-site-verification" content="52aZ1BnXciPM13YPPQYvvjqerziQrKWPBqGWGHlBVHU" />
+    <!-- SEO Meta Tags -->
     <title>Eng Ahmed Alaa | ASP.NET Core Backend Developer | Portfolio</title>
     <meta name="description"
         content="Eng Ahmed Alaa - Professional ASP.NET Core Backend Developer specializing in Clean Architecture, RESTful APIs, and SQL Server. View my portfolio and projects.">
@@ -410,12 +411,12 @@
             </div>
 
             <!-- Filter Buttons -->
-            <div class="reveal-section mb-12 flex flex-wrap justify-center gap-4">
+            <div class="reveal-section mb-12 flex flex-nowrap justify-center gap-4 overflow-x-auto pb-2">
                 <button data-filter="all"
                     class="filter-btn active px-6 py-3 rounded-full font-semibold transition-all cursor-active">
                     <i data-lucide="grid-3x3" class="w-4 h-4 inline-block mr-2"></i>
                     All Projects
-                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">7</span>
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">8</span>
                 </button>
                 <button data-filter="wpf"
                     class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active">
@@ -429,8 +430,14 @@
                     ASP.NET MVC
                     <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">2</span>
                 </button>
+                <!-- ✅ جوا الـ div -->
+                <button data-filter="api"
+                    class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active">
+                    <i data-lucide="server" class="w-4 h-4 inline-block mr-2"></i>
+                    ASP.NET API
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">1</span>
+                </button>
             </div>
-
             <!-- Projects Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
 
@@ -789,7 +796,66 @@
                         <div class="card-reflection"></div>
                     </div>
                 </div>
+                <!-- E-Commerce API -->
+                <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
+                    data-category="api">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="h-full bg-[#0a0a0a] rounded-xl overflow-hidden relative z-20 flex flex-col">
+                        <!-- Project Image -->
+                        <div
+                            class="relative h-48 overflow-hidden bg-gradient-to-br from-yellow-900/20 to-orange-900/20">
+                            <img src="./Images/Projects_Images/E_comerce API/1.png" alt="E-Commerce API"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
 
+                            <!-- Category Badge -->
+                            <div class="absolute top-3 right-3">
+                                <span
+                                    class="px-2 py-1 bg-red-500/90 backdrop-blur-sm text-white rounded-full text-xs font-bold">API</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 bg-yellow-500/10 rounded-lg text-yellow-500">
+                                    <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                                </div>
+                                <a href="https://github.com/Eng-ahmed-dev1/E-Commerce_Clean_Architecture"
+                                    target="_blank">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-gray-500 group-hover:text-yellow-500 transition-colors"></i>
+                                </a>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">E-Commerce
+                                API</h3>
+                            <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-1">
+                                A production-ready e-commerce backend built with ASP.NET Core Web API and Clean
+                                Architecture.
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-xs">API</span>
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs">ASP.NET
+                                    Core</span>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-xs">SQL
+                                    Server</span>
+                            </div>
+
+                            <!-- View More Button -->
+                            <a href="project-details.html?project=ecommerce-api"
+                                class="magnetic-btn w-full px-6 py-3 bg-yellow-600/10 border border-yellow-500/30 text-yellow-400 rounded-full font-semibold hover:bg-yellow-600 hover:text-white transition-all flex items-center justify-center gap-2 cursor-active">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                View More Photos
+                            </a>
+                        </div>
+                        <div class="card-reflection"></div>
+                    </div>
+                </div>
                 <!-- Inventory Management System Project Card -->
                 <div class="project-card tilt-card group relative bg-[#0f0f0f] rounded-2xl border border-white/10 p-1 overflow-hidden reveal-section cursor-active"
                     data-category="wpf">

@@ -85,7 +85,110 @@ const projectsData = {
             }
         ]
     },
+    // ================================================
+    // أضيف الـ entry دي جوا projectsData object
+    // في نهاية الـ object قبل الـ closing }
+    // ================================================
 
+    'ecommerce-api': {
+        name: 'E-Commerce API',
+        tagline: 'Layered ASP.NET Core Web API Backend',
+        description: 'A production-ready e-commerce backend built with ASP.NET Core Web API and Clean Architecture. Features full CRUD for products, categories, cart, orders, payments, coupons, reviews, and wishlists — secured with ASP.NET Identity and role-based authorization, documented with Swagger/OpenAPI, and backed by a comprehensive integration test suite.',
+        githubUrl: 'https://github.com/Eng-ahmed-dev1/E-Commerce_Clean_Architecture',
+        technologies: [
+            { name: 'ASP.NET Core', color: 'blue' },
+            { name: 'SQL Server', color: 'purple' },
+            { name: 'Entity Framework Core', color: 'green' },
+            { name: 'ASP.NET Identity', color: 'orange' },
+            { name: 'Clean Architecture', color: 'pink' },
+            { name: 'Swagger / OpenAPI', color: 'red' },
+            { name: 'AutoMapper', color: 'yellow' },
+            { name: 'xUnit / Integration Tests', color: 'blue' }
+        ],
+        mainImage: './Images/Projects_Images/E_comerce API/1.png',
+        gallery: [
+            {
+                image: './Images/Projects_Images/E_comerce API/1.png',
+                title: 'Swagger UI — Account & Cart',
+                description: 'Interactive API documentation showing Account authentication endpoints and Cart management operations'
+            },
+            {
+                image: './Images/Projects_Images/E_comerce API/2.png',
+                title: 'Swagger UI — Category & Coupon',
+                description: 'Full CRUD endpoints for product categories and coupon administration'
+            },
+            {
+                image: './Images/Projects_Images/E_comerce API/3.png',
+                title: 'Swagger UI — Orders & Payments',
+                description: 'Order lifecycle management and payment processing endpoints'
+            },
+            {
+                image: './Images/Projects_Images/E_comerce API/4.png',
+                title: 'Swagger UI — Products & Wishlist',
+                description: 'Product catalog, reviews, roles, and wishlist endpoints'
+            },
+            {
+                image: './Images/Projects_Images/E_comerce API/5.png',
+                title: 'Solution Structure',
+                description: 'Clean Architecture layers: Domain, Application (12+ services), Infrastructure, and Web API'
+            }
+        ],
+        features: [
+            {
+                icon: 'layers',
+                title: 'Clean Architecture',
+                description: 'Strict separation across Domain, Application, Infrastructure, and Web API layers with no cross-layer leakage.',
+                color: 'blue'
+            },
+            {
+                icon: 'shopping-cart',
+                title: 'Full E-Commerce Modules',
+                description: 'Account, Catalog, Cart, Orders, Payments, Coupons, Reviews, and Wishlist — all production-ready.',
+                color: 'orange'
+            },
+            {
+                icon: 'shield',
+                title: 'Identity & Role-Based Auth',
+                description: 'ASP.NET Identity for user management with role-based authorization on sensitive admin endpoints.',
+                color: 'purple'
+            },
+            {
+                icon: 'file-text',
+                title: 'Swagger / OpenAPI',
+                description: 'Full interactive documentation for every endpoint, auto-generated and accessible in Development.',
+                color: 'green'
+            },
+            {
+                icon: 'check-circle',
+                title: 'Integration Test Suite',
+                description: 'WebApplicationFactory-based tests with InMemory DB, custom auth handler, and end-to-end flow coverage.',
+                color: 'pink'
+            },
+            {
+                icon: 'git-branch',
+                title: 'Result<T> Pattern',
+                description: 'Consistent operation outcomes across all services with standardized HTTP status responses.',
+                color: 'red'
+            }
+        ],
+        implementation: [
+            {
+                title: 'Clean Architecture Layers',
+                description: 'The solution is divided into four projects: E_Commerce.Domain (entities, enums, repository contracts), E_Commerce.Application (12+ services, DTOs, AutoMapper profiles, Result<T> pattern), E_Commerce.Infrastructure (DbContext, generic repo, Unit of Work), and E_Commerce.Web (thin controllers, middleware, pipeline config).',
+                color: 'blue'
+            },
+            {
+                title: 'Security & Middleware Pipeline',
+                description: 'Global exception middleware captures all unhandled errors and returns consistent JSON responses. ASP.NET Identity handles user registration, login, and role assignment. Role-based policies protect admin-only endpoints while public routes are explicitly marked anonymous.',
+                color: 'purple'
+            },
+            {
+                title: 'Testing Strategy',
+                description: 'A dedicated test project (E_Commerce.Web.ApiTests) uses WebApplicationFactory to spin up the full host with an InMemory EF Core database. A custom authentication handler simulates bearer identity, enabling full coverage of auth flows, CRUD operations, cart-to-order-to-payment flows, and 401/403 authorization behavior.',
+                color: 'green'
+            }
+        ]
+    },
     'management-system': {
         name: 'Management System',
         tagline: 'Project & Task Management Platform',
@@ -605,7 +708,7 @@ function displayProjectDetails() {
             </div>
         </div>
     `).join('');
-    
+
     // إضافة Image Zoom Modal
     initImageZoom();
 
@@ -675,34 +778,34 @@ function initImageZoom() {
             </div>
         </div>
     `;
-    
+
     // Add modal to body
     document.body.insertAdjacentHTML('beforeend', modalHTML);
-    
+
     const modal = document.getElementById('image-zoom-modal');
     const zoomedImage = document.getElementById('zoomed-image');
     const imageTitle = document.getElementById('zoom-image-title');
     const closeBtn = document.getElementById('close-zoom');
-    
+
     // Add click listeners to all zoomable images
     document.querySelectorAll('.zoomable-image').forEach(img => {
         img.addEventListener('click', () => {
             const imgSrc = img.getAttribute('data-zoom-src') || img.src;
             const title = img.alt;
-            
+
             zoomedImage.src = imgSrc;
             imageTitle.textContent = title;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
-            
+
             // Fade in animation
             setTimeout(() => {
                 modal.style.opacity = '1';
             }, 10);
         });
     });
-    
+
     // Close modal function
     const closeModal = () => {
         modal.style.opacity = '0';
@@ -712,24 +815,24 @@ function initImageZoom() {
             document.body.style.overflow = '';
         }, 300);
     };
-    
+
     // Close on button click
     closeBtn.addEventListener('click', closeModal);
-    
+
     // Close on background click
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
-    
+
     // Close on ESC key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
             closeModal();
         }
     });
-    
+
     // Initialize Lucide icons for modal
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();

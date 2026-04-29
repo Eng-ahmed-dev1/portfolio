@@ -232,6 +232,7 @@ document.querySelectorAll('.magnetic-btn').forEach(btn => {
     });
     btn.addEventListener('mouseleave', () => btn.style.transform = `translate(0, 0)`);
 });
+
 // ============================================
 // ENHANCED LOADING SCREEN - ROBUST VERSION
 // ============================================
@@ -259,12 +260,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let messageIndex = 0;
     let percentage = 0;
     
-    const totalDuration = 2500; // قللنا الوقت لـ 2.5 ثانية عشان أسرع للمستخدم
+    const totalDuration = 2500;
     const intervalTime = 30; 
     const increments = totalDuration / intervalTime;
     const percentageStep = 100 / increments;
     
-    // دالة إخفاء الشاشة
     const hideLoadingScreen = () => {
         try {
             sessionStorage.setItem('hasSeenLoading', 'true');
@@ -273,7 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingScreen.classList.add('fade-out');
         setTimeout(() => {
             loadingScreen.style.display = 'none';
-            // التأكد من تفعيل السكرول لو كان متوقف
             document.body.style.overflow = '';
         }, 800);
     };
@@ -288,7 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 percentageElement.textContent = Math.floor(percentage);
             }
             
-            // Change loading text based on percentage
             if (loadingText) {
                 if (percentage > 25 && messageIndex === 0) {
                     messageIndex = 1;
@@ -307,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, intervalTime);
 
-    // 3. Failsafe Timeout: إجبار الشاشة على الإخفاء بعد 4 ثواني كحد أقصى مهما حصل
+    // 3. Failsafe Timeout
     setTimeout(() => {
         clearInterval(percentageInterval);
         if (loadingScreen.style.display !== 'none') {
@@ -336,7 +334,6 @@ class ProjectFilter {
     }
 
     init() {
-        // Add click event listeners to filter buttons
         this.filterButtons.forEach(button => {
             button.addEventListener('click', (e) => {
                 const filter = e.currentTarget.dataset.filter;
@@ -345,7 +342,6 @@ class ProjectFilter {
             });
         });
 
-        // Initialize Lucide icons
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
@@ -356,11 +352,11 @@ class ProjectFilter {
         let visibleCount = 0;
 
         this.projectCards.forEach(card => {
-            const categories = card.dataset.category.split(' ');
-            const shouldShow = filter === 'all' || categories.includes(filter);
+            // ✅ FIX: toLowerCase() على الاتنين عشان case-insensitive comparison
+            const categories = card.dataset.category.toLowerCase().split(' ');
+            const shouldShow = filter === 'all' || categories.includes(filter.toLowerCase());
 
             if (shouldShow) {
-                // Show card with animation
                 card.style.display = 'block';
                 setTimeout(() => {
                     card.style.opacity = '1';
@@ -368,7 +364,6 @@ class ProjectFilter {
                 }, 10);
                 visibleCount++;
             } else {
-                // Hide card with animation
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 setTimeout(() => {
@@ -377,14 +372,12 @@ class ProjectFilter {
             }
         });
 
-        // Show/hide no results message
         if (visibleCount === 0) {
             this.noResultsMessage.classList.remove('hidden');
         } else {
             this.noResultsMessage.classList.add('hidden');
         }
 
-        // Reinitialize Lucide icons after DOM changes
         setTimeout(() => {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
@@ -393,12 +386,9 @@ class ProjectFilter {
     }
 
     updateActiveButton(clickedButton) {
-        // Remove active class from all buttons
         this.filterButtons.forEach(btn => {
             btn.classList.remove('active');
         });
-
-        // Add active class to clicked button
         clickedButton.classList.add('active');
     }
 }
