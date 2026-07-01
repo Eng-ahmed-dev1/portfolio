@@ -660,10 +660,10 @@ const projectsData = {
             { name: 'CLI Tool', color: 'green' },
             { name: 'Roslyn (Deep Refactor)', color: 'orange' }
         ],
-        mainImage: './Images/Projects_Images/Archneter_Images/icon.png',
+        mainImage: './Images/Projects_Images/Archneter/icon.png',
         gallery: [
             {
-                image: './Images/Projects_Images/Archneter_Images/icon.png',
+                image: './Images/Projects_Images/Archneter/icon.png',
                 title: 'Archneter CLI',
                 description: 'Archneter Architecture CLI Tool Logo'
             }
