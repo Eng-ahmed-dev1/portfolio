@@ -1,22 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fonts */
-  --font-sans: 'Inter', sans-serif;
-  
-  /* Colors */
-  --color-brand-dark: #0a0a0a;
-  --color-brand-accent: #3b82f6;
-  --color-brand-secondary: #64748b;
-  
-  /* Animation */
-  --animate-float: float 6s ease-in-out infinite;
+    /* Fonts */
+    --font-sans: 'Inter', sans-serif;
+
+    /* Colors */
+    --color-brand-dark: #0a0a0a;
+    --color-brand-accent: #3b82f6;
+    --color-brand-secondary: #64748b;
+
+    /* Animation */
+    --animate-float: float 6s ease-in-out infinite;
 }
 
 /* انقل الـ keyframes هنا (خارج بلوك الـ theme) */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 
@@ -516,7 +523,7 @@ button,
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(180px, auto);
     }
-    
+
     .bento-large,
     .bento-wide,
     .bento-tall,
@@ -546,11 +553,12 @@ button,
     .loader-bar-new {
         width: 280px;
     }
-    
+
     .bento-card {
         padding: 1.5rem;
     }
 }
+
 /* Categories Grid Layout */
 .skills-categories-container {
     display: grid;
@@ -616,6 +624,7 @@ button,
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.1);
 }
+
 /* ============================================
    PROJECT FILTERING STYLES
    ============================================ */
@@ -690,10 +699,13 @@ button,
 }
 
 @keyframes badgePulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.9;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
@@ -710,6 +722,7 @@ button,
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -722,7 +735,7 @@ button,
         padding: 0.75rem 1.5rem;
         font-size: 0.875rem;
     }
-    
+
     .filter-btn .count {
         padding: 0.25rem 0.5rem;
         font-size: 0.75rem;
@@ -760,7 +773,9 @@ button,
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Enhanced Card Hover Effects for Filtered View */
@@ -796,26 +811,54 @@ button,
     opacity: 0;
 }
 
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
-.project-card:nth-child(5) { animation-delay: 0.5s; }
-.project-card:nth-child(6) { animation-delay: 0.6s; }
-.project-card:nth-child(7) { animation-delay: 0.7s; }
-.project-card:nth-child(8) { animation-delay: 0.8s; }
-.project-card:nth-child(9) { animation-delay: 0.9s; }
+.project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.project-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.project-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.project-card:nth-child(9) {
+    animation-delay: 0.9s;
+}
 
 @keyframes cardEntrance {
     from {
         opacity: 0;
         transform: translateY(30px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
 }
+
 /* ============================================
    IMAGE ZOOM MODAL STYLES
    ============================================ */
@@ -839,6 +882,7 @@ button,
         transform: scale(0.8);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
@@ -855,7 +899,7 @@ button,
     transform: scale(1.05);
 }
 
-/* Close button hover effect */
+
 #close-zoom {
     transition: all 0.3s ease;
 }
@@ -893,13 +937,13 @@ button,
         max-width: 95vw;
         max-height: 80vh;
     }
-    
+
     #close-zoom {
         top: 1rem;
         right: 1rem;
         padding: 0.75rem;
     }
-    
+
     #zoom-image-title {
         font-size: 0.75rem;
         padding: 0.5rem 1rem;
