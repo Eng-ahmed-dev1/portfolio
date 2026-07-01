@@ -647,6 +647,65 @@ const projectsData = {
                 color: 'purple'
             }
         ]
+    },
+    'archneter': {
+        name: 'Archneter Architecture CLI',
+        tagline: 'Enterprise Code Scaffolding Tool',
+        description: 'Archneter is an enterprise-grade, extensible command-line interface (CLI) engineered to accelerate .NET application development. It eliminates manual boilerplate setup by automating the scaffolding of highly cohesive, scalable software architectures, and includes a powerful refactoring engine to modernize legacy codebases.',
+        githubUrl: 'https://github.com/Eng-ahmed-dev1/Archneter-Library',
+        docsUrl: 'https://archnetdoc.vercel.app/',
+        technologies: [
+            { name: '.NET 8.0+', color: 'purple' },
+            { name: 'C#', color: 'blue' },
+            { name: 'CLI Tool', color: 'green' },
+            { name: 'Roslyn (Deep Refactor)', color: 'orange' }
+        ],
+        mainImage: './Images/Projects_Images/Archneter_Images/icon.png',
+        gallery: [
+            {
+                image: './Images/Projects_Images/Archneter_Images/icon.png',
+                title: 'Archneter CLI',
+                description: 'Archneter Architecture CLI Tool Logo'
+            }
+        ],
+        features: [
+            {
+                icon: 'terminal',
+                title: 'Project Generation',
+                description: 'Instantly scaffold projects in Clean Architecture, Microservices, Modular Monolith, Vertical Slice, and N-Tier.',
+                color: 'blue'
+            },
+            {
+                icon: 'zap',
+                title: 'Deep Refactoring',
+                description: 'Intelligent MVC to API refactoring with deep dependency extraction and Roslyn-based syntax tree transformations.',
+                color: 'orange'
+            },
+            {
+                icon: 'layout',
+                title: 'Web UI Dashboard',
+                description: 'Interactive web dashboard to configure and generate your architecture visually directly from the browser.',
+                color: 'green'
+            },
+            {
+                icon: 'package',
+                title: 'Auto-Injection & NuGet',
+                description: 'Automatically injects essential enterprise NuGet packages (MediatR, FluentValidation, EF Core) and manages cross-project dependencies.',
+                color: 'purple'
+            }
+        ],
+        implementation: [
+            {
+                title: 'Command Pipeline',
+                description: 'Built with strong abstractions, supporting a robust catalog of commands (new, refactor, ui, help) with intelligent fallbacks and batch package restoration.',
+                color: 'blue'
+            },
+            {
+                title: 'Intelligent Modernization',
+                description: 'The refactor command analyzes existing legacy codebases, converts controllers, strips static files, and dynamically scaffolds the result into modern layers.',
+                color: 'purple'
+            }
+        ]
     }
 };
 
@@ -677,6 +736,19 @@ function displayProjectDetails() {
         : project.name;
     document.getElementById('project-description').textContent = project.description;
     document.getElementById('github-link').href = project.githubUrl;
+
+    // Docs Link Handling
+    const docsLink = document.getElementById('docs-link');
+    if (docsLink) {
+        if (project.docsUrl) {
+            docsLink.href = project.docsUrl;
+            docsLink.classList.remove('hidden');
+            docsLink.classList.add('flex');
+        } else {
+            docsLink.classList.remove('flex');
+            docsLink.classList.add('hidden');
+        }
+    }
 
     // عرض التقنيات
     const techStackContainer = document.getElementById('tech-stack');
