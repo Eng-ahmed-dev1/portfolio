@@ -411,14 +411,30 @@
             </div>
 
             <!-- Filter Buttons -->
-            <div class="reveal-section mb-12 flex flex-wrap gap-4 justify-center md:justify-start">
-                <button class="filter-btn active px-6 py-2 rounded-full font-semibold transition-all flex items-center gap-2 cursor-active"
-                    data-filter="all">
-                    <i data-lucide="layout-grid" class="w-4 h-4"></i>
+            <div class="reveal-section mb-12 flex flex-nowrap justify-center gap-4 overflow-x-auto pb-2">
+                <button data-filter="all" class="filter-btn active px-6 py-3 rounded-full font-semibold transition-all cursor-active whitespace-nowrap">
+                    <i data-lucide="grid-3x3" class="w-4 h-4 inline-block mr-2"></i>
                     All Projects
-                    class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active">
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">9</span>
+                </button>
+                <button data-filter="wpf" class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active whitespace-nowrap">
+                    <i data-lucide="monitor" class="w-4 h-4 inline-block mr-2"></i>
+                    WPF Desktop
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">5</span>
+                </button>
+                <button data-filter="mvc" class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active whitespace-nowrap">
+                    <i data-lucide="globe" class="w-4 h-4 inline-block mr-2"></i>
+                    ASP.NET MVC
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">2</span>
+                </button>
+                <button data-filter="api" class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active whitespace-nowrap">
                     <i data-lucide="server" class="w-4 h-4 inline-block mr-2"></i>
                     ASP.NET API
+                    <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">1</span>
+                </button>
+                <button data-filter="tools" class="filter-btn px-6 py-3 rounded-full font-semibold transition-all cursor-active whitespace-nowrap">
+                    <i data-lucide="wrench" class="w-4 h-4 inline-block mr-2"></i>
+                    Tools & Libraries
                     <span class="count ml-2 px-2 py-0.5 rounded-full text-xs">1</span>
                 </button>
             </div>
